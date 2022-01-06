@@ -13,7 +13,12 @@ namespace Commander.Controllers
     [ApiController]
     public class CommandsController : ControllerBase
     {
-        private readonly SpecificCommanderRepository _repository = new SpecificCommanderRepository();
+        private readonly ICommanderRepository _repository;
+
+        public CommandsController(ICommanderRepository repository)
+        {
+            _repository = repository;
+        }
 
         // GET api/commands/
         [HttpGet]
