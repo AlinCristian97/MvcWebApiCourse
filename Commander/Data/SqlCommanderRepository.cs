@@ -13,7 +13,12 @@ namespace Commander.Data
         public SqlCommanderRepository(CommanderContext context)
         {
             _context = context;
-        } 
+        }
+
+        public void CreateCommand(Command command)
+        {
+            throw new NotImplementedException();
+        }
 
         public Command GetCommand(int id)
         {
@@ -23,6 +28,11 @@ namespace Commander.Data
         public IEnumerable<Command> GetCommands()
         {
             return _context.Commands.ToList();
+        }
+
+        public bool SaveChanges()
+        {
+            throw new NotImplementedException();
         }
     }
 }

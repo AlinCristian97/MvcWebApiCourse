@@ -8,6 +8,11 @@ namespace Commander.Data
 {
     public class SpecificCommanderRepository : ICommanderRepository
     {
+        public void CreateCommand(Command command)
+        {
+            throw new NotImplementedException();
+        }
+
         public Command GetCommand(int id)
         {
             return new Command
@@ -30,6 +35,11 @@ namespace Commander.Data
             };
 
             return commands;
+        }
+
+        public bool SaveChanges()
+        {
+            throw new NotImplementedException();
         }
     }
 }
