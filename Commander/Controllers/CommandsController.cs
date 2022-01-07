@@ -1,4 +1,6 @@
-﻿using Commander.Data;
+﻿using AutoMapper;
+using Commander.Data;
+using Commander.Dtos;
 using Commander.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,28 +16,37 @@ namespace Commander.Controllers
     public class CommandsController : ControllerBase
     {
         private readonly ICommanderRepository _repository;
+        private readonly IMapper _mapper;
 
-        public CommandsController(ICommanderRepository repository)
+        public CommandsController(
+            ICommanderRepository repository,
+            IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
         // GET api/commands/
         [HttpGet]
-        public ActionResult<IEnumerable<Command>> GetCommands()
+        public ActionResult<IEnumerable<CommandReadDto>> GetCommands()
         {
             var commands = _repository.GetCommands();
 
-            return Ok(commands);
+            return Ok(_mapper.Map<IEnumerable<CommandReadDto>>(commands));
         }
 
         // GET api/commands/{id}
         [HttpGet("{id}")]
-        public ActionResult<Command> GetCommand(int id)
+        public ActionResult<CommandReadDto> GetCommand(int id)
         {
             var command = _repository.GetCommand(id);
 
-            return Ok(command);
+            if (command != null)
+            {
+                return Ok(_mapper.Map<CommandReadDto>(command));
+            }
+
+            return NotFound();
         }
     }
 }
