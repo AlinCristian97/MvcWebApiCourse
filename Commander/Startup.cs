@@ -1,3 +1,4 @@
+using AutoMapper;
 using Commander.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,6 +29,8 @@ namespace Commander
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CommanderContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CommanderConnection")));
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddControllers();
 
