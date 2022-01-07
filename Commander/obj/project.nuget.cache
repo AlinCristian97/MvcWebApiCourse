@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "PEjEeCf+70+hSWAXLb7BXgDpXE5fzIaJrqxALjPk36f5ZhM4g5wj/ir9PjLlnpDUiN6/aVQ/9oKWThc+GalZXg==",
+  "dgSpecHash": "pbYvLeq6o/8D9McIl5V3cxQyhpEauUJcWHQwLX7JyqMIYXd+oAFcgbFmWx2MYa6t6dM4j2lxm+tHgw1VN+Mf5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\alin.apostol\\source\\repos\\MvcWebApiCourse\\Commander\\Commander.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\alin.apostol\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\alin.apostol\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\alin.apostol\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\alin.apostol\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\alin.apostol\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
