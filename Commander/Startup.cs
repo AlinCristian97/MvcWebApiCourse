@@ -31,7 +31,8 @@ namespace Commander
 
             services.AddControllers();
 
-            services.AddScoped<ICommanderRepository, SpecificCommanderRepository>();
+            // services.AddScoped<ICommanderRepository, SpecificCommanderRepository>();
+            services.AddScoped<ICommanderRepository, SqlCommanderRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
