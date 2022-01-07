@@ -17,7 +17,12 @@ namespace Commander.Data
 
         public void CreateCommand(Command command)
         {
-            throw new NotImplementedException();
+            if (command == null)
+            {
+                throw new ArgumentNullException(nameof(command));
+            }
+
+            _context.Commands.Add(command);
         }
 
         public Command GetCommand(int id)
@@ -32,7 +37,7 @@ namespace Commander.Data
 
         public bool SaveChanges()
         {
-            throw new NotImplementedException();
+            return _context.SaveChanges() >= 0;
         }
     }
 }
